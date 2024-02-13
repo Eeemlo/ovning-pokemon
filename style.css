@@ -8,6 +8,71 @@
 
 .pokemon__card{
     width: 250px;
-    height: 250px;
-    
+    height: 250px;  
+    animation: card-animation 1s;
 }
+
+@keyframes card-animation {
+    from {
+        opacity: 0;
+        transform: rotateX(-40deg);
+    } to {
+        opacity: 100;
+        transform: rotateX(0);
+    }
+}
+
+.pokemon__card img {
+    max-width: 200px;
+    width: 150px;
+}
+
+.pokemon__card img:hover {
+    animation: hover-animation 0.7s ease-in-out;
+    animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+@keyframes hover-animation {
+    from {
+        width: 150px
+    } to {
+        width: 200px;
+    }
+}
+
+/*
+
+@keyframes cursor {
+    to {
+        border-left: 2px solid ;
+    }
+}
+
+@keyframes words {
+    0%, 20% {
+        content: "Bulbasaur";
+    }
+    21%, 40% {
+        content: "Charmander";
+    }
+    41%, 60% {
+        content: "Squirtle";
+    }
+    61%, 80% {
+        content: "Pikachu";
+    }
+    81%, 100% {
+        content: "Gengar";
+    }
+}
+
+@keyframes typing {
+    10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+        width: 0;
+    }
+    5%,20%,25%,40%,45%,60%,65%,80%,85%{
+        width: calc(100% + 8px);
+    }
+}
+*/
